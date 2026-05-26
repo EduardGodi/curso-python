@@ -14,7 +14,7 @@ confianza_deteccion = 0.87
 # (Debe ser un valor booleano: True o False)
 
 # TU CÓDIGO AQUÍ:
-es_valida = None
+es_valida = confianza_deteccion >= 0.80
 
 
 # 2. Rango de Coordenadas:
@@ -27,12 +27,12 @@ dedo_x = 310
 # Guarda el resultado en 'dedo_en_boton' usando operadores de comparación y el operador lógico 'and'.
 
 # TU CÓDIGO AQUÍ:
-dedo_en_boton = None
+dedo_en_boton = dedo_x >= 200 and dedo_x <= 400
 
 
 # 3. Alertas de Seguridad o Gestos:
 # Supongamos que estamos controlando una interfaz.
-# Queremos activar una acción si "se detecta la mano izquierda" O si "la confianza de la mano derecha es alta".
+# Queremos activar una accón si "se detecta la mano izquierda" O si "la confianza de la mano derecha es alta".
 mano_izquierda_detectada = False
 mano_derecha_detectada = True
 confianza_derecha = 0.92
@@ -44,7 +44,7 @@ confianza_derecha = 0.92
 # Guarda el resultado en la variable 'activar_control':
 
 # TU CÓDIGO AQUÍ:
-activar_control = None
+activar_control = mano_izquierda_detectada or (mano_derecha_detectada and confianza_derecha > 0.85)
 
 
 # 4. Operador de Negación (not):
@@ -55,8 +55,7 @@ camara_encendida = False
 # Guarda el resultado en 'lanzar_alerta'.
 
 # TU CÓDIGO AQUÍ:
-lanzar_alerta = None
-
+lanzar_alerta = not camara_encendida
 
 # ------------------------------------------------------------------
 # 🛑 NO MODIFIQUES ESTAS LÍNEAS DE PRUEBA
