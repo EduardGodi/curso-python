@@ -27,7 +27,14 @@ telegram_enviado = False
 #    - Mantén 'buzzer_activo' y 'telegram_enviado' en False
 
 # TU CÓDIGO AQUÍ:
-
+if(confianza_deteccion >= 0.85):
+    print("Mano detectada con alta confianza. ¡Activando buzzer y enviando Telegram!");
+    buzzer_activo = True
+    telegram_enviado = True
+elif(confianza_deteccion >= 0.50):
+    print("Deteccion debil. Monitoreando");
+else:
+    print("No hay manos detectadas en el rango aceptable");
 
 
 # ------------------------------------------------------------------

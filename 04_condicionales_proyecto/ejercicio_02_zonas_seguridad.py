@@ -34,7 +34,16 @@ nivel_alerta = ""  # Deberás cambiar este valor a "ROJO", "AMARILLO" o "VERDE" 
 
 # TU CÓDIGO AQUÍ:
 
-
+# --- CÓDIGO SUGERIDO POR EL TUTOR ---
+if 200 <= mano_x <= 440 and 150 <= mano_y <= 330:
+    print("¡ALERTA MÁXIMA! Mano en zona restringida.")
+    nivel_alerta = "ROJO"
+elif 100 <= mano_x <= 540 and 50 <= mano_y <= 430:
+    print("Advertencia: Mano cerca de zona restringida.")
+    nivel_alerta = "AMARILLO"
+else:
+    print("Estado seguro.")
+    nivel_alerta = "VERDE"
 
 # ------------------------------------------------------------------
 # 🛑 NO MODIFIQUES ESTAS LÍNEAS DE PRUEBA

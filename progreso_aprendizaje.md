@@ -9,6 +9,10 @@ Este archivo es nuestro registro persistente para llevar un seguimiento de tu ap
 * **Objetivo:** Conectar una cámara IP Hikvision, detectar manos en tiempo real usando MediaPipe, activar un buzzer físico/simulado y enviar notificaciones de alerta con foto por Telegram al detectar una mano.
 * **Metodología de Aprendizaje:** Práctica basada en retos (ejercicios de código estructurados) aplicados al contexto del proyecto final para evitar el aburrimiento y acelerar la asimilación.
 
+## ⚙️ Reglas de la Sesión
+* **Modo de Intervención:** El tutor solo analiza y lee el contexto de los ejercicios. No debe editar ningún archivo de código hasta que el estudiante pida explícitamente revisar o corregir.
+* **Corrección No Destructiva:** Cuando el estudiante pida corregir un código, el tutor **no debe borrar el código del estudiante**. En su lugar, mantendrá el código original intacto y agregará la solución/corrección en la parte inferior del archivo (claramente diferenciada) para facilitar la comparación y el aprendizaje del error.
+
 ---
 
 ## 📅 Plan de Ruta Acelerada (26-May al 06-Jun)
@@ -32,6 +36,13 @@ Este archivo es nuestro registro persistente para llevar un seguimiento de tu ap
   * **Logro:** Corrección de la lógica de evaluación condicional y el funcionamiento de la negación (`not`) en el ejercicio 3.
   * **Decisión estratégica:** El estudiante comparte su proyecto de fin de curso (Cámara Hikvision + MediaPipe + Telegram + Buzzer) con fecha límite del 6 de Junio. Se diseña una ruta intensiva basada en ejercicios prácticos aplicados a este proyecto.
   * **Siguiente paso:** Crear carpeta `04_condicionales_proyecto` con 3 ejercicios contextualizados.
+
+* **Sesión 2 (2026-05-26 - Fin de sesión):**
+  * **Estado de la carpeta `04_condicionales_proyecto`:**
+    * `ejercicio_01_deteccion_alerta.py`: ¡Completado con éxito! Lógica condicional básica para alertas de confianza resuelta.
+    * `ejercicio_02_zonas_seguridad.py`: Pendiente de realizar.
+    * `ejercicio_03_filtro_falsos_positivos.py`: En progreso (avanzada la estructura de cámara conectada; queda pendiente anidar correctamente la comprobación del buzzer y corregir una comparación lógica `==` por asignación `=`).
+  * **Estado al finalizar:** Sesión finalizada por el estudiante a mitad del bloque de condicionales.
 
 ---
 *Nota: En cada nueva conversación que iniciemos, puedes decirme: "Tutor, lee mi progreso" y yo sabré exactamente en qué nos quedamos.*
