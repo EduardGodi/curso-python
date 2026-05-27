@@ -12,6 +12,7 @@ Este archivo es nuestro registro persistente para llevar un seguimiento de tu ap
 ## ⚙️ Reglas de la Sesión
 * **Modo de Intervención:** El tutor solo analiza y lee el contexto de los ejercicios. No debe editar ningún archivo de código hasta que el estudiante pida explícitamente revisar o corregir.
 * **Corrección No Destructiva:** Cuando el estudiante pida corregir un código, el tutor **no debe borrar el código del estudiante**. En su lugar, mantendrá el código original intacto y agregará la solución/corrección en la parte inferior del archivo (claramente diferenciada) para facilitar la comparación y el aprendizaje del error.
+* **Git — El estudiante maneja sus propios commits:** El tutor nunca ejecutará comandos `git`. En su lugar, sugerirá el mensaje de commit en formato **Conventional Commits** (`tipo(scope): descripción`) para que el estudiante lo use al hacer `git commit` manualmente. Esto refuerza el aprendizaje de Git y GitHub.
 
 ---
 
@@ -19,7 +20,7 @@ Este archivo es nuestro registro persistente para llevar un seguimiento de tu ap
 
 | Fase | Temas de Python | Aplicación al Proyecto | Estado |
 | :--- | :--- | :--- | :--- |
-| **Fase 1 (Hoy)** | Condicionales (`if`, `elif`, `else`) | Tomar decisiones basadas en confianza de detección y coordenadas de la mano. | 🔄 En curso |
+| **Fase 1** | Condicionales (`if`, `elif`, `else`) | Tomar decisiones basadas en confianza de detección y coordenadas de la mano. | ✅ Completada |
 | **Fase 2** | Bucles y Bucles Infinitos (`while`, `for`) | Simular y entender el procesamiento continuo de fotogramas de la cámara. | ⏳ Pendiente |
 | **Fase 3** | Funciones y Módulos | Crear funciones reutilizables para enviar mensajes a Telegram y activar el buzzer. | ⏳ Pendiente |
 | **Fase 4** | Listas y Diccionarios | Almacenar coordenadas de la mano (puntos de referencia de MediaPipe). | ⏳ Pendiente |
@@ -43,6 +44,18 @@ Este archivo es nuestro registro persistente para llevar un seguimiento de tu ap
     * `ejercicio_02_zonas_seguridad.py`: Pendiente de realizar.
     * `ejercicio_03_filtro_falsos_positivos.py`: En progreso (avanzada la estructura de cámara conectada; queda pendiente anidar correctamente la comprobación del buzzer y corregir una comparación lógica `==` por asignación `=`).
   * **Estado al finalizar:** Sesión finalizada por el estudiante a mitad del bloque de condicionales.
+
+* **Sesión 3 (2026-05-26 - Noche / Pre-cena):**
+  * **Logro:** Establecimiento de reglas claras de tutoría (intervenciones no destructivas, añadir sugerencias abajo y esperar confirmación del estudiante). Se revirtió el código del estudiante a su estado original y se colocaron las sugerencias del tutor abajo en `ejercicio_02` y `ejercicio_03` para su posterior comparación. Se explicó la lógica detallada del error en el ejercicio 3.
+  * **Siguiente paso:** El estudiante comparará los códigos al regresar de cenar para dar por concluida la Fase 1.
+
+* **Sesión 4 (2026-05-27 - Mañana):**
+  * **Logro:** ✅ **Fase 1 completada.** Los 3 ejercicios de `05_condicionales_refuerzo` fueron resueltos y verificados correctamente:
+    * `ejercicio_A_el_if_trampa.py`: ✅ Análisis correcto del bug y corrección con `if/elif/else`.
+    * `ejercicio_B_semaforo_confianza.py`: ✅ Semáforo de 4 niveles usando comparaciones encadenadas (regla obligatoria cumplida).
+    * `ejercicio_C_decision_telegram.py`: ✅ Lógica multicondición con `and`, `or` y `not` funcionando.
+  * **Commit sugerido:** `feat(condicionales): completar ejercicios de refuerzo 05`
+  * **Siguiente paso:** Iniciar **Fase 2 — Bucles** (`while`, `for`).
 
 ---
 *Nota: En cada nueva conversación que iniciemos, puedes decirme: "Tutor, lee mi progreso" y yo sabré exactamente en qué nos quedamos.*

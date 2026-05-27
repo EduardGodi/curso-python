@@ -41,7 +41,20 @@ enviar_notificacion = False
 mensaje = ""
 
 # TU CÓDIGO AQUÍ:
-
+if notificaciones_activas == True and notificacion_reciente == False and nivel_alerta == "ROJO":
+    mensaje = "🚨 ALERTA CRÍTICA: Mano en zona restringida."
+    enviar_notificacion = True
+elif notificaciones_activas == True and notificacion_reciente == False and nivel_alerta == "AMARILLO":
+    mensaje = "⚠️ Advertencia: Mano cerca de zona de riesgo."
+    enviar_notificacion = True
+else:
+    if not notificaciones_activas:
+        print("Notificaciones desactivadas por el usuario.")
+    if notificacion_reciente == True:
+        print("Notificación reciente. Esperando intervalo.")
+    else:
+        print("Sin novedad. No se requiere notificación.")
+    
 
 # ------------------------------------------------------------------
 # 🛑 NO MODIFIQUES ESTAS LÍNEAS DE PRUEBA

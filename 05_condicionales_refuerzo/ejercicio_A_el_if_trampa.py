@@ -41,19 +41,19 @@ print(f"Estado final del sistema: {estado_sistema}")
 # 📝 PARTE 1 — Tu análisis (escribe en comentarios)
 # ============================================================
 # Pregunta 1: ¿Qué imprime el código cuando confianza_deteccion = 0.75?
-# Tu respuesta:
+# Tu respuesta: Posible detección
 
 # Pregunta 2: ¿Cuántos bloques 'if' se ejecutan con ese valor? ¿Por qué?
-# Tu respuesta:
+# Tu respuesta: practicamente se evalua en cada uno de los if, ya que los toma por separado, lo ideal searía crea if, elif y else
 
 # Pregunta 3: ¿Qué valor tiene 'estado_sistema' al final? ¿Es el correcto?
-# Tu respuesta:
+# Tu respuesta: Moderado y es correcto
 
 # Pregunta 4: ¿Qué pasa si confianza_deteccion = 0.95? ¿Cuántos bloques se ejecutan?
-# Tu respuesta:
+# Tu respuesta: practicamente entra en el primer if, pero se evalua con todos, ya que son bloques separados
 
 # Pregunta 5: ¿Hay algún valor de confianza que no entre en ningún bloque? ¿Cuál?
-# Tu respuesta:
+# Tu respuesta: el que no estaría cubierto sería 0.60
 
 # ============================================================
 # 🔧 PARTE 2 — Tu corrección
@@ -70,6 +70,16 @@ print("\n[Tu corrección:]")
 estado_sistema = ""  # Reiniciamos la variable
 
 # TU CÓDIGO AQUÍ:
+
+if confianza_deteccion > 0.90:
+    print("🔴 Alerta crítica: Mano detectada con alta confianza.")
+    estado_sistema = "CRITICO"
+elif confianza_deteccion > 0.60:
+    print("🟡 Alerta moderada: Posible detección.")
+    estado_sistema = "MODERADO"
+else:
+    print("🟢 Sin alerta: Confianza baja.")
+    estado_sistema = "NORMAL"
 
 
 # ------------------------------------------------------------------

@@ -37,6 +37,21 @@ accion = ""
 
 # TU CÓDIGO AQUÍ:
 
+if 0.0 < confianza <=0.50:
+    color_semaforo = "ROJO"
+    accion = "Ignorar detección."
+elif 0.50 < confianza <= 0.70:
+    color_semaforo = "NARANJA"
+    accion = "Registrar en el log."
+elif 0.70 < confianza <= 0.90:
+    color_semaforo = "AMARILLO"
+    accion = "Enviar advertencia."
+else:
+    color_semaforo = "VERDE"
+    accion = "Activar Buzzer y enviar alerta a Telegram."
+    
+    
+    
 
 # ------------------------------------------------------------------
 # 🛑 NO MODIFIQUES ESTAS LÍNEAS DE PRUEBA
