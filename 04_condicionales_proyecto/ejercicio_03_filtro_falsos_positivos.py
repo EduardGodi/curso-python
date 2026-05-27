@@ -39,39 +39,39 @@ cambiar_estado_buzzer = False
 
 # TU CÓDIGO AQUÍ:
 
-if (camara_conectada == False):
+if not camara_conectada:
     print("Error: Cámara Hikvision fuera de línea.");
     sistema_activo = False;
-elif (camara_conectada == True):
+else:
     sistema_activo = True;
-    if(confianza_deteccion >0.95):
-        if (buzzer_encendido == False):
+    if(confianza_deteccion >0.90):
+        if not buzzer_encendido:
             print("¡Alerta confirmada! Encendiendo buzzer...")
             cambiar_estado_buzzer = True
-        elif (buzzer_encendido == True):
+        else:
             print("La alerta continúa, pero el buzzer ya está activo.")
             cambiar_estado_buzzer = False
-    if(confianza_deteccion <= 0.90):
+    else:
         print("Señal de video estable. Sin novedades.")
         cambiar_estado_buzzer = False
     
 # --- CÓDIGO SUGERIDO POR EL TUTOR ---
 # (Este bloque se ejecuta a continuación para asegurar que las variables de salida se asignen correctamente)
-if not camara_conectada:
-    print("[Tutor] Error: Cámara Hikvision fuera de línea.")
-    sistema_activo = False
-else:
-    sistema_activo = True
-    if confianza_deteccion > 0.90:
-        if not buzzer_encendido:
-            print("[Tutor] ¡Alerta confirmada! Encendiendo buzzer...")
-            cambiar_estado_buzzer = True
-        else:
-            print("[Tutor] La alerta continúa, pero el buzzer ya está activo.")
-            cambiar_estado_buzzer = False
-    else:
-        print("[Tutor] Señal de video estable. Sin novedades.")
-        cambiar_estado_buzzer = False
+# if not camara_conectada:
+#     print("[Tutor] Error: Cámara Hikvision fuera de línea.")
+#     sistema_activo = False
+# else:
+#     sistema_activo = True
+#     if confianza_deteccion > 0.90:
+#         if not buzzer_encendido:
+#             print("[Tutor] ¡Alerta confirmada! Encendiendo buzzer...")
+#             cambiar_estado_buzzer = True
+#         else:
+#             print("[Tutor] La alerta continúa, pero el buzzer ya está activo.")
+#             cambiar_estado_buzzer = False
+#     else:
+#         print("[Tutor] Señal de video estable. Sin novedades.")
+#         cambiar_estado_buzzer = False
 
 # ------------------------------------------------------------------
 # 🛑 NO MODIFIQUES ESTAS LÍNEAS DE PRUEBA
